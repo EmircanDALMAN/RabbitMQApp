@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "cd8zFSxP+wBKraAU4EV4VWrL7UX/bNs50cqq2H5koaBXmhTKyXayFgo/543Os61Ng9QkTzT8U7XBgiX1EZbXdA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\emiq1\\OneDrive\\Masaüstü\\RabbitMQ App\\RabbitMQAppBackEnd\\RabbitMQAppBackEnd.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\emiq1\\.nuget\\packages\\rabbitmq.client\\6.2.1\\rabbitmq.client.6.2.1.nupkg.sha512",
+    "C:\\Users\\emiq1\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\emiq1\\.nuget\\packages\\system.threading.channels\\4.7.1\\system.threading.channels.4.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}
