@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="signalr.min.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+    <script>
+        $(document).ready(() => {
+
+            var connection = new signalR.HubConnectionBuilder()
+                .withUrl("https://localhost:5001/messagehub")
+                .build();
+            connection.start();
+            connection.on("receiveMessage", message => {
+                $("div").html(message);
+                $("div").fadeIn(2000, () => { });
+            });
+            $("#btnGonder").click(() => {
+                let email = $("#txtEmail").val();
+                let message = $("#txtMessage").val();
+                $.post("https://localhost:5001/api/message", {
+                    Email: email,
+                    Message: message
+                }, () => {
+
+                });
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <form>
+        <input type="email" id="txtEmail" class="form-control" placeholder="Email" required autofocus>
+        <input type="text" id="txtMessage" class="form-control" placeholder="Mesajınız" required>
+        <button class="w-100 btn btn-lg btn-primary" type="submit" id="btnGonder">Gönder</button>
+      </form>
+</body>
+
+</html>
